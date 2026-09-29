@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Saludo =()=>{
     const [nombreP, setNombreP]= useState("")
-    const[muestraSaludo, setMostrarSaludo]= useState(false)
+    const[mostrarSaludo, setMostrarSaludo]= useState(false)
 
     const handleAceptar =()=>
         {setMostrarSaludo(true);
@@ -18,7 +18,7 @@ const Saludo =()=>{
             onChange={(event)=> setNombreP(event.target.value)}
             />
         <button onClick={handleAceptar}> Aceptar</button>
-        {MostrarSaludo && <h1>hola, {nombreP || "invitado"}</h1>}
+        {mostrarSaludo && <h1>hola, {nombreP || "invitado"}</h1>}
 
         </section>
     );
